@@ -1,33 +1,31 @@
-
 #import
 from captcha.image import ImageCaptcha
 
-#create main function
+#create the main function
 
-def create_image() ->None: #function return none
+def create_image() ->None: #the function returns none
+try:
     try:
-        try:
-            width = int(input("Введите ширину капчи:"))
-            height = int(input("Введите высоту капчи:"))
-            image =ImageCaptcha(width=width,height=height)
-
-            text =str(input("Введите текст капчи:"))
-
-            #create captcha
-
-            data =image.generate(text)
-
-            #write captcha
-
-            image.write(text,"catcha.png")
-        except ValueError:
-            print("Вы ввели неконкретные данные")
-            return
-
-    except OverflowError:
-        print("Вы ввели неконкретные данные")
-        return
-
-#launch
-if __name__ == "__main__":
+        width = int(input("Enter the top of the captcha:"))
+        height = int(input("Enter the top of the captcha:"))
+        image =ImageCaptcha(width=width,height=height)
+        
+         text =str(input("Enter captcha text:"))
+        
+         #create a captcha
+        
+         data =image.generate(text)
+        
+         #enter a captcha
+        
+         image.write(text,"catcha.png")
+    except ValueError:
+        print("You entered some vague information").
+        
+except for the overflow error:
+    print("You entered some vague information").
+        
+        
+    #run
+if __name__ =="__main__":
     create_image()
